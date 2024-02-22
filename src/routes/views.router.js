@@ -6,8 +6,7 @@ router.get('/', (req, res) => {
     res.render('index', {})
 })
 
-
-router.get("/message", (req, res) => {
+router.get("/paburoxChat", (req, res) => {
     res.render("messages");
 });
 

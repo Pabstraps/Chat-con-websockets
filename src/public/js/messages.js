@@ -8,7 +8,7 @@ Swal.fire({
     icon: "info",
     title: "Alto ahi, quien eres?",
     input: 'text',
-    text: "Ingrese el username para identificarse en el chat",
+    text: "Ingrese el UserName para identificarse en el chat",
     color: "#00913f ",
     inputValidator: (value)=>{
         if(!value){
@@ -36,8 +36,8 @@ chatBox.addEventListener('keyup', evt =>{
         }else{
             swal.fire({
                 icon:"warning",
-                title: "Alert",
-                text: "Por favor ingrese un mensaje"
+                title: "Oye loco, no escribiste nada",
+                text: ":("
             })
         }
     }
@@ -56,11 +56,11 @@ socket.on ('messageLogs', data=>{
 
 
 socket.on('userConnected', data =>{
-    let message = `Nuevo usuario conectado ${data}`
+    let message = `Nuevo usuario entra al chat: ${data}`
 
     Swal.fire({
         icon: 'info',
-        title: 'nuevo usuario entra al chat',
+        title: 'Here Comes a New Challenger',
         text: message,
         toast: true,
         
